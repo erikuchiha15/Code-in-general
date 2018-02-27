@@ -1,0 +1,175 @@
+#include <iostream>
+#include<allegro5\allegro.h>
+#include<allegro5/allegro_image.h>
+
+using namespace std;
+int main() {
+	ALLEGRO_DISPLAY *display = NULL;
+	al_init();
+	al_init_image_addon();
+	display = al_create_display(700, 500);
+	//loads bitmaps from folder
+	ALLEGRO_BITMAP *image = al_load_bitmap("Naruto.jpg");
+	//png files have automatic transparency, jnps and other files types do not
+	int Ryuuji = 0;
+	int Sasuke = 0;
+	int Sorata = 0;
+	int Taiga = 0;
+	char input;
+	al_clear_to_color(al_map_rgb(255, 255, 255));
+	al_draw_bitmap(image, 0, 0, 0);
+	al_flip_display();
+
+	cout << "What is your favorite eye color" << endl;
+	cin >> input;
+	if (input == 'b')
+		Ryuuji++;
+	if (input == 'r')
+		Sasuke++;
+	if (input == 'd') {
+		Sorata++;
+		Taiga++;
+	}
+	al_clear_to_color(al_map_rgb(255, 255, 255));
+	image = al_load_bitmap("EMS.jpg");//reload image
+	al_draw_bitmap(image, 0, 0, 0);//draw it to memory
+	al_flip_display();//draw to screen
+	cout << "What is your favorite anime" << endl;
+	cin >> input;
+	if (input == 'T') {
+		Ryuuji++;
+		Taiga++;
+	}
+	if (input == 'P')
+		Sorata++;
+	if (input == 'N')
+		Sasuke++;
+	al_clear_to_color(al_map_rgb(255, 255, 255));
+	image = al_load_bitmap("Taiga.png");//reload image
+	al_draw_bitmap(image, 0, 0, 0);//draw it to memory
+	al_flip_display();//draw to screen
+
+	cout << "What is your favorite hair color" << endl;
+	cin >> input;
+	if (input == 'b')
+		Ryuuji++;
+	if (input == 'm') {
+		Sorata++;
+		Taiga++;
+	}
+	if (input == 'z')
+		Sasuke++;
+	al_clear_to_color(al_map_rgb(255, 255, 255));
+	image = al_load_bitmap("Sussano.png");//reload image
+	al_draw_bitmap(image, 0, 0, 0);//draw it to memory
+	al_flip_display();//draw to screen
+
+	cout << "What gender do you prefer" << endl;
+	cin >> input;
+	if (input == 'm') {
+		Ryuuji++;
+		Sorata++;
+		Sasuke++;
+	}
+	if (input == 'f')
+		Taiga++;
+	al_clear_to_color(al_map_rgb(255, 255, 255));
+	image = al_load_bitmap("Aisaka.png");//reload image
+	al_draw_bitmap(image, 0, 0, 0);//draw it to memory
+	al_flip_display();//draw to screen
+
+	cout << "What is your favorite waifu/husbando" << endl;
+	cin >> input;
+	if (input == 'T')
+		Taiga++;
+	if (input == 'S')
+		Sasuke++;
+	if (input == 'M')
+		Sorata++;
+	if (input == 'R')
+		Ryuuji++;
+	al_clear_to_color(al_map_rgb(255, 255, 255));
+	image = al_load_bitmap("sorata.jpg");//reload image
+	al_draw_bitmap(image, 0, 0, 0);//draw it to memory
+	al_flip_display();//draw to screen
+	cout << "What is Your house cleaner" << endl;
+	cin >> input;
+	if (input == 'T')
+		Taiga;
+	if (input == 'S')
+		Sasuke++;
+	if (input == 'M')
+		Sorata++;
+	if (input == 'R')
+		Ryuuji++;
+	al_clear_to_color(al_map_rgb(255, 255, 255));
+	image = al_load_bitmap("ryuuji.jpg");//reload image
+	al_draw_bitmap(image, 0, 0, 0);//draw it to memory
+	al_flip_display();//draw to screen
+	cout << "Who is the most powerful" << endl;
+	cin >> input;
+	if (input == 'S')
+		Sasuke++;
+	if (input == 'T')
+		Taiga;
+	if (input == 'W')
+		Sorata++;
+	if (input == 'L')
+		Ryuuji++;
+	al_clear_to_color(al_map_rgb(255, 255, 255));
+	image = al_load_bitmap("STRONG.png");//reload image
+	al_draw_bitmap(image, 0, 0, 0);//draw it to memory
+	al_flip_display();//draw to screen
+	cout << "Who has gotten the least amount of love this quiz" << endl;
+	cin >> input;
+	if (input == 'S')
+		Sorata++;
+	if (input == 'E')
+		Sasuke++;
+	if (input == 'T')
+		Taiga++;
+	if (input == 'R')
+		Ryuuji++;
+	al_clear_to_color(al_map_rgb(255, 255, 255));
+	image = al_load_bitmap("Soo.png");//reload image
+	al_draw_bitmap(image, 0, 0, 0);//draw it to memory
+	al_flip_display();//draw to screen
+	cout << "Who is the most emo" << endl;
+	cin >> input;
+	if (input == 'E')
+		Sasuke++;
+	if (input == 'S')
+		Sorata++;
+	if (input == 'T')
+		Taiga++;
+	if (input == 'R')
+		Ryuuji++;
+	al_clear_to_color(al_map_rgb(255, 255, 255));
+	image = al_load_bitmap("EMO.jpg");//reload image
+	al_draw_bitmap(image, 0, 0, 0);//draw it to memory
+	al_flip_display();//draw to screen
+	cout << "Who do you think you will get as your result" << endl;
+	cin >> input;
+	if (input == 'E')
+		Sasuke++;
+	if (input == 'S')
+		Sorata++;
+	if (input == 'T')
+		Taiga++;
+	if (input == 'R')
+		Ryuuji++;
+	al_clear_to_color(al_map_rgb(255, 255, 255));
+	image = al_load_bitmap("ADULT.png");//reload image
+	al_draw_bitmap(image, 0, 0, 0);//draw it to memory
+	al_flip_display();//draw to screen
+
+	if (Ryuuji > Sasuke && Ryuuji > Sorata && Ryuuji > Taiga)
+		cout << "You are Ryuuji!" << endl;
+	if (Sasuke > Ryuuji && Sasuke > Sorata && Sasuke > Taiga)
+		cout << "You are Sasuke!" << endl;
+	if (Sorata > Ryuuji && Sorata > Sasuke && Sorata > Taiga)
+		cout << "You are Sorata!" << endl;
+	if (Taiga > Ryuuji &&Taiga > Sasuke && Taiga > Sorata)
+		cout << "You are Taiga!" << endl;
+
+}
